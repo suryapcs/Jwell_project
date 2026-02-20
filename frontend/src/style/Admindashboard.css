@@ -1,0 +1,95 @@
+.admin-dashboard-container {
+  padding:40px 20px;
+  min-height: 100vh;
+}
+
+.border{
+  margin-top: 60px;
+  border-top: 1px solid rgb(193, 191, 191);
+}
+
+.borderline{
+  margin-top: 140px;
+  border-top: 1px solid rgb(193, 191, 191);
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Grid for 4 cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Card styles */
+.dashboard-card {
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
+}
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); */
+}
+
+.dashboard-card h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Color themes */
+.card-blue {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+.card-green {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+.card-purple {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+.card-orange {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+/* Update these styles in your Admindashboard.css file */
+
+.dashboard-card.card-cyan {
+  background: linear-gradient(135deg, #d944c3,  #0dc933);
+}
+
+.dashboard-card.card-teal {
+  background: linear-gradient(135deg, #48c6ef, #aa00ac);
+}
+
+.dashboard-card.card-pink {
+  background: linear-gradient(135deg, #295ed1, #ca431e);
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

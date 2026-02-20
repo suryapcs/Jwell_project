@@ -1,0 +1,170 @@
+
+/* Sidebar.css */
+.side-menu {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-right: 1px solid #ccc; /* Borderline added */
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-sizing: border-box; /* Ensures padding and border don't affect width */
+}
+
+/* Remove box-shadow */
+.side-menu {
+  box-shadow: none; 
+}
+
+/* Sidebar Header (for Vetri Finance and logo) */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 20px 20px; */
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+
+
+/* .sidebar-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+} */
+
+
+/* .sidebar-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+} */
+
+.sidebar-title {
+  display: flex;
+  align-items: center; /* Vertically align letters and logo */
+  justify-content: center; /* Center everything horizontally */
+  font-size: 1.2rem;
+  font-weight: bold;
+  gap: 2px; 
+}
+
+/* Logo styling */
+.logo-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-logo {
+  width: 50px;  /* Adjust size as needed */
+  height: 50px; /* Keep it square for balance */
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+
+.c1 { color: #ff4e50; }   /* Dark red */
+.c2 { color: #fc913a; }   /* Burnt orange */
+.c3 { color: #f9d423; }   /* Deep yellow */
+.c4 { color: #30cfd0; }   /* Teal blue */
+.c5 { color: #330867; }   /* Deep purple */
+.c6 { color: #000000; }   /* Space for the gap */
+.c7 { color: #8e2de2; }   /* Violet */
+.c8 { color: #ff0080; }   /* Magenta */
+.c9 { color: #ff512f; }   /* Red-orange */
+.c10 { color: #005bea; }  /* Royal blue */
+.c11 { color: #43cea2; }  /* Emerald green */
+.c12 { color: #b24592; }  /* Plum */
+.c13 { color: #ff3c3c; }  /* Crimson */
+
+
+/* Menu Buttons */
+.menu-buttons {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-btn {
+  width: 100%;
+  padding: 15px 20px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-btn:hover {
+  background-color: #b0f0fc;
+  color: #075871;
+}
+
+/* Active menu item highlight */
+.active-menu-btn {
+  background-color: #93d6f5; /* A light blue highlight */
+  color: #14579f; /* Darker blue text */
+  font-weight: bold;
+  border-left: 4px solid #14579f; /* Highlight border on the left */
+}
+
+.active-menu-btn .icon,
+.active-menu-btn .label {
+  color: #14579f;
+}
+
+.menu-btn .icon {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.menu-btn .label {
+  flex-grow: 1;
+}
+
+/* Logout button specific styling */
+.logout-btn {
+  margin-top: auto; /* Pushes the logout button to the bottom */
+  border-top: 1px solid #eee;
+  color: #d9534f;
+}
+
+.logout-btn:hover {
+  background-color: #fdf2f2;
+}
+
+/* Mobile-friendly styles */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .side-menu {
+    width: 200px;
+    transform: translateX(-100%);
+  }
+  .side-menu.open {
+    transform: translateX(0);
+  }
+  .sidebar-toggle {
+    display: block;
+  }
+}

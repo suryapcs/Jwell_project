@@ -1,0 +1,96 @@
+
+/* Content Section */
+.dashboard-content {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+.search-input {
+    width: 300px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.search-input:focus {
+    outline: none;
+    border-color: #888;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #333;
+    color: white;
+}
+td {
+    background-color: #f9f9f9;
+}
+
+/* Images in Table */
+.table-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.restore-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+.restore-btn { color: #4CAF50; }
+.delete-btn { color: #e74c3c; }
+
+/* Confirmation Dialog */
+.confirmation-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+.dialog-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 320px;
+}
+.dialog-actions button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.confirm-btn { background-color: #e74c3c; color: #fff; }
+.cancel-btn { background-color: #2ecc71; color: #fff; }

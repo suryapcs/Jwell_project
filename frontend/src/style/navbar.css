@@ -1,0 +1,95 @@
+/* navbar.css */
+.navbar-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  background-color: #ffffff; /* White background */
+  color: #333;
+  /* border-bottom: 2px solid #e0e0e0; */
+  position: fixed;
+  top: 0;
+  height: 60px;
+  z-index: 1000;
+  left: 250px;
+  right: 0;
+  transition: left 0.3s ease;
+}
+
+/* New: Make navbar-left a flex container that grows to fill space */
+.navbar-left {
+  flex-grow: 1; /* Allows it to expand */
+  margin-right: 20px; /* Add some space between search box and date */
+}
+
+/* Search container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%; /* Make it take up the full width of its parent */
+  max-width: 500px; /* Adjust this value to your preferred max width */
+}
+
+.search-icon {
+  top: 30px;
+  position: absolute;
+  left: 12px;
+  transition: color 0.3s ease;
+}
+
+/* Clean rounded search input */
+.navbarsearch {
+  margin-top: 20px;
+  width: 100%; /* Make input fill its parent container */
+  padding: 0.5rem 0.4rem 0.5rem 2.7rem;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #d8d8d8;
+  color: #333;
+  font-size: 0.95rem;
+  transition: border 0.3s ease;
+  /* Removed max-width from here as it's handled by the container */
+}
+
+.navbar-search::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.navbar-search:focus {
+  border: 2px solid #2575fc;
+}
+
+.navbar-search:focus + .search-icon,
+.search-container:hover .search-icon {
+  color: #14579f;
+}
+
+/* Calendar and date section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+
+.date-icon {
+  font-size: 1.3rem;
+  color: #14579f;
+  transition: transform 0.3s ease;
+}
+
+.navbar-right:hover .date-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.current-date {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: #f5f5f5; /* Light grey badge */
+  padding: 5px 10px;
+  border-radius: 12px;
+}

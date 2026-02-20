@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  
+}
+/* Container for the Dashboard */
+.admin-dashboard {
+  display: flex;
+  height: 100vh;
+  /* Adjust to allow space for both sidebars */
+}
+
+/* Mini Sidebar (Icons only) */
+.mini-side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px; /* Adjust the width as needed */
+  background-color: #fffcfc;
+  padding: 10px 0;
+  z-index: 200; /* Ensure it is on top of the main sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0px 5px rgba(38, 100, 52, 0.2); /* Optional: shadow for separation */
+}
+
+.mini-menu-btn {
+  background-color: transparent;
+  color: rgb(46, 65, 140);
+  border: none;
+  font-size: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.mini-menu-btn:hover {
+  background-color: #f4f4f4; /* Optional: Add a hover effect */
+}
+
+/* Main Sidebar */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 50px; /* Starts after the mini sidebar */
+  bottom: 0;
+  width: 250px; /* Sidebar width */
+  background-color: #f5f5f5;
+  padding: 20px;
+  z-index: 100; /* Ensure it is below the mini sidebar */
+ 
+}
+
+/* Menu buttons in the main sidebar */
+.menu-btn {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: transparent;
+  color: rgb(46, 65, 150);
+  border: 0cap solid #ddd;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family:monospace;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn:hover {
+  color: #888;
+  transform: scale(1.05);
+}
+
+
+.menu-btn i {
+  margin-right: 10px;
+}
+
+/* Logo container */
+/* Logo Image */
+.logo-img {
+  width: 50px; /* Adjust the size to your preference */
+  height: 50px; /* Maintain the same height to make it a perfect circle */
+  border-radius: 50%; /* This makes the image rounded */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+
+/* Main content area (if needed) */
+.main-content {
+/* Add space to the left for both sidebars */
+  padding: 20px;
+  /* justify-content: center; */
+  /* overflow-y: auto; */
+}
+.main-content h1{
+  text-align: center;
+  /* margin-left: 20% !important;  */
+  /* justify-content: center; */
+}
+
+
+
+/* Main Content */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  width: calc(100% - 220px);
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+.main-content h1{
+  justify-content:end;
+}
+/* Search Bar */
+.search-container {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content:end;
+}
+
+.search-input {
+  width: 600px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+ 
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* Table wrapper */
+.table-wrapper {
+  overflow-x: auto; /* This will allow horizontal scrolling if the table overflows */
+  margin-left: 250px; /* This ensures the table is not hidden behind the sidebar (adjust the value to your sidebar width) */
+}
+
+/* Table styling */
+table {
+  width: 100%; /* Make table take the full width of the container */
+  border-collapse: collapse;
+  table-layout: auto; /* Allows the table to adjust the width dynamically */
+}
+
+/* Table cells */
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Buttons in the Actions column */
+td button {
+  display: inline-block; /* Aligns the buttons horizontally */
+  margin-right: 10px; /* Adds space between buttons */
+  padding: 8px;
+  border-radius: 50%; /* Makes buttons round */
+  cursor: pointer;
+  background-color: transparent; /* No background */
+  border: 1px solid transparent; /* Invisible border */
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 36px; /* Center the icon inside the button */
+}
+
+/* Specific button colors */
+.update-btn i {
+  color: #4CAF50; /* Green color for the update button icon */
+}
+
+.delete-btn i {
+  color: #f44336; /* Red color for the delete button icon */
+}
+
+.loan-btn i {
+  color: #ff9800; /* Orange color for the loan button icon */
+}
+.show-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2e418c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.show-more-btn:hover {
+  background-color: #1e2a60;
+}
+
+/* Add responsiveness to the table for smaller screens */
+@media (max-width: 768px) {
+  .table-wrapper {
+    margin-left: 0; /* Remove margin on small screens */
+  }
+
+  table {
+    font-size: 12px; /* Reduce font size for small screens */
+  }
+
+  td button {
+    padding: 6px; /* Smaller button size for small screens */
+    width: 30px; /* Adjust width */
+    height: 30px; /* Adjust height */
+  }
+}

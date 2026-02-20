@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom, #f9f9ff, #f7f7f9);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.login-box h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.input-group i {
+  padding: 10px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+  background: transparent;
+  color: white;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.options label {
+  font-size: 0.9em;
+  color: white;
+}
+
+.options a {
+  font-size: 0.9em;
+  color: #c0c0ff;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #509eec;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  background: #4e54c8;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.register-link a {
+  color: #df1db8;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Container for the golden coin */
+.golden-coin {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffd700 30%, #ffcc00 70%, #ff9900 100%); /* Gold gradient */
+  border-radius: 50%; /* Circle shape */
+  animation: rotateCoin 4s infinite linear, glowEffect 1.5s ease-in-out infinite alternate; /* Rotating and glowing */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(255, 215, 0, 0.7); /* Enhanced shadow */
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the text */
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Add glowing effect to the coin */
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(255, 215, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2), 0 6px 30px rgba(255, 215, 0, 1);
+  }
+  100% {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(255, 215, 0, 0.7);
+  }
+}
+
+/* 3D rotation effect for the coin */
+@keyframes rotateCoin {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: rotateY(90deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(0deg);
+  }
+  75% {
+    transform: rotateY(270deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(0deg);
+  }
+}
+
+/* Text style inside the coin */
+.golden-coin-text {
+  position: absolute;
+  font-size: 16px; /* Adjust the size of the text */
+  color: white;
+  font-weight: bold;
+  z-index: 2; /* Ensures text is on top of the coin */
+}

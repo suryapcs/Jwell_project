@@ -1,0 +1,105 @@
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1976d2;
+  padding: 15px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #1565c0;
+}
+
+/* Cards Navbar Style */
+.cards-navbar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.card-navbar-item {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.card-navbar-item h2 {
+  font-size: 14px;
+  color: #1976d2;
+}
+
+.card-navbar-item p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Other Styling (for consistency) */
+.content {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #1976d2;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.social-icons a:hover {
+  text-decoration: underline;
+}
+
+.invoice-btn{
+  font-size: 11px;
+}
+
+.actions-cell {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center;     /* vertically center */
+  gap: 10px;               /* spacing between icons/buttons */
+}
+
+.customerlist-icons {
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.customerlist-icons:hover {
+  color: #1976d2; /* change color on hover */
+}

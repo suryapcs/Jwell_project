@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #f7f7f7; /* Soft background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container to center the form and image side by side */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Form container styling */
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 45%;  /* Form will take up 45% of the container width */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Heading */
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input field wrapper */
+.input-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* Input field styling */
+.input-field {
+  padding: 12px 40px; /* Add space on the left for the icon */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Focused input field */
+.input-field:focus {
+  border-color: #7c7c7c;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Icon inside the input field */
+.icon {
+position: relative;
+  left: 25px;
+  top: 8px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+  pointer-events: none; /* Prevent icon from interfering with input field */
+}
+
+/* Register Button Styling */
+.register-btn {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #357ab7;
+}
+
+.register-btn:active {
+  background-color: #2b5e91;
+}
+
+/* Login button below the Register button */
+.login-btn-container {
+  margin-top: 20px;
+}
+
+.login-btn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #218838;
+}
+
+.login-btn:active {
+  background-color: #1e7e34;
+}
+
+/* Image container styling */
+.image-container {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-container,
+  .image-container {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .input-field, .register-btn {
+    font-size: 14px;
+  }
+}

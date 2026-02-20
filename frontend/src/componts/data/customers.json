@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "1",
+    "name": "Ramesh Kumar",
+    "phone_number": "9876543210",
+    "loanAmount": 50000,
+    "address": "123, MG Road, Chennai",
+    "aadhar_number": "1234-5678-9012",
+    "isDeleted": false
+  },
+  {
+    "_id": "2",
+    "name": "Sita Devi",
+    "phone_number": "9123456780",
+    "loanAmount": 75000,
+    "address": "45, Anna Nagar, Chennai",
+    "aadhar_number": "2345-6789-0123",
+    "isDeleted": false
+  },
+  {
+    "_id": "3",
+    "name": "Arun Raj",
+    "phone_number": "9988776655",
+    "loanAmount": 60000,
+    "address": "78, T Nagar, Chennai",
+    "aadhar_number": "3456-7890-1234",
+    "isDeleted": true
+  },
+  {
+    "_id": "4",
+    "name": "Priya Sharma",
+    "phone_number": "9871234560",
+    "loanAmount": 45000,
+    "address": "56, Velachery, Chennai",
+    "aadhar_number": "4567-8901-2345",
+    "isDeleted": false
+  },
+  {
+    "_id": "5",
+    "name": "Karthik R",
+    "phone_number": "9998887776",
+    "loanAmount": 85000,
+    "address": "89, Adyar, Chennai",
+    "aadhar_number": "5678-9012-3456",
+    "isDeleted": true
+  }
+]

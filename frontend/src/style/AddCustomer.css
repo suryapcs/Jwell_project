@@ -1,0 +1,57 @@
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Page heading */
+.main-content h1 {
+    margin-bottom: 20px;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Form fields */
+.main-content form .MuiTextField-root {
+    margin-bottom: 16px;
+}
+
+/* Success and error messages */
+.success-message {
+    color: #2e7d32; /* Green */
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: #c62828; /* Red */
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Submit button */
+.main-content button[type="submit"] {
+    margin-top: 10px;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .customer-page-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}

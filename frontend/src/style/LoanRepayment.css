@@ -1,0 +1,92 @@
+
+/* Content Section */
+.dashboard-content {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* ===== Searchable Dropdown ===== */
+.search-input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.search-input:focus {
+    outline: none;
+    border-color: #888;
+}
+
+/* ===== Customer Details Box ===== */
+.customer-details {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.customer-details h3 {
+    margin-bottom: 10px;
+}
+.customer-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* ===== Repayment Form ===== */
+.repayment-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.repayment-form .form-group {
+    margin-bottom: 15px;
+}
+.repayment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.repayment-form input, .repayment-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Submit Button */
+.repayment-submit-button {
+    background-color: #1E3A8A;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.repayment-submit-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* ===== Success / Error Messages ===== */
+.success-message {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+}
+.error-message {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+}
