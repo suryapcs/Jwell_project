@@ -53,10 +53,6 @@ router.post("/logout", logout);
 router.put("/restore/:id", customerController.restoreCustomer);
 
 router.get('/:customerId/item/:itemCode', customerController.getCustomerItemDetails);
-router.get(
-  "/invoice/:customerId/:itemCode",
-  customerController.getInvoiceByCustomerAndItem
-);
 router.post("/customer/:customerId/item/:itemCode/close-loan", customerController.closeLoan);
 
 router.put("/restore-item/:customerId/:itemCode", customerController.restoreItem);

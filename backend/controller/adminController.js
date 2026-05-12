@@ -1,4 +1,5 @@
 const Admin = require('../models/Admin'); // Ensure correct path
+const { Customer } = require('../models/Customer'); // For dashboard stats
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
@@ -115,22 +116,18 @@ const adminLogin = async (req, res) => {
 
 const dashboard = async (req, res) => {
     try {
-        // Fetch the number of admins, jewelry items, and customers
+        // Fetch the number of admins and customers
         const totalAdmins = await Admin.countDocuments();
-        const totalJewelryItems = await Jewelry.countDocuments();
         const totalCustomers = await Customer.countDocuments();
 
-        // Example of other data you can retrieve for the dashboard
-        const recentAdmins = await Admin.find().sort({ createdAt: -1 }).limit(5); // Recent 5 admins
-        const recentJewelryItems = await Jewelry.find().sort({ createdAt: -1 }).limit(5); // Recent 5 jewelry items
+        // Recent 5 admins
+        const recentAdmins = await Admin.find().sort({ createdAt: -1 }).limit(5);
 
         // Create a dashboard summary
         const dashboardData = {
             totalAdmins,
-            totalJewelryItems,
             totalCustomers,
             recentAdmins,
-            recentJewelryItems,
         };
 
         // Send the dashboard data as JSON response

@@ -1,4 +1,4 @@
-const { Customer, validItemTypes } = require("../models/Jewellery");
+const { Customer, validItemTypes } = require("../models/Customer");
 const InterestDetails = require('../models/interestDetails'); // 🔹 add this
 
 exports.addJewellery = async (req, res) => {
