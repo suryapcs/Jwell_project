@@ -22,7 +22,6 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchDashboardStats = async () => {
       try {
-        // Change the API endpoint to the new dashboard stats API
         const res = await api.get("/api/customer/dashboard/stats", {
           withCredentials: true,
         });

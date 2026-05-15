@@ -1,6 +1,6 @@
 
 // Sidebar.js
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { 
   FaDesktop, FaUsers, FaUserPlus, FaTrash, FaDollarSign, FaSignOutAlt, FaBars 
@@ -9,10 +9,9 @@ import '../../style/Sidebar.css';
 import logo from '../../asset/images/vetrilogo.png'; 
 import api from '../../utils/api';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, toggleSidebar }) => {
   const navigate = useNavigate();
-  const location = useLocation(); // Get current location
-  const [isOpen, setIsOpen] = useState(true);
+  const location = useLocation();
 
   const menuItems = [
     { label: 'Customer Summary', icon: <FaDesktop />, path: '/AdminDashboard' },
@@ -25,20 +24,21 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     try {
-      await api.post('/api/customer/logout');
-      localStorage.removeItem("isLoggedIn");
-      // localStorage.removeItem("adminData");
-      navigate("/", { replace: true });
+      await api.post('/api/admin/logout');
     } catch (error) {
-      console.error('Logout failed:', error);
-      alert('Failed to logout. Please try again.');
+      console.error('Logout API failed:', error);
+    } finally {
+      // Always clear local state and redirect
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("adminData");
+      navigate("/login", { replace: true });
     }
   };
 
   return (
     <>
       {/* Hamburger toggle for mobile */}
-      <div className="sidebar-toggle" onClick={() => setIsOpen(!isOpen)}>
+      <div className="sidebar-toggle" onClick={toggleSidebar}>
         <FaBars />
       </div>
 
@@ -91,4 +91,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebar;

@@ -140,7 +140,7 @@ const handleSubmit = async (e) => {
           </Box>
 
           <Typography variant="body2" sx={{ mt: 4, textAlign: 'center', color: 'gray' }}>
-            Don't have an account? <span style={{ color: '#1E3A8A', cursor: 'pointer' }} onClick={() => navigate('/')}>Register here</span>
+            Don't have an account? <span style={{ color: '#1E3A8A', cursor: 'pointer' }} onClick={() => navigate('/register')}>Register here</span>
           </Typography>
         </Grid>
       </Grid>

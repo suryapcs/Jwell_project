@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from "react";
 import "../../style/navbar.css";
-import { FaSearch, FaCalendarAlt } from "react-icons/fa";
+import { FaSearch, FaCalendarAlt, FaBars } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   const [search, setSearch] = useState("");
   const [currentDate, setCurrentDate] = useState("");
 
@@ -20,15 +20,35 @@ const Navbar = () => {
   return (
     <nav className="navbar-head">
       <div className="navbar-left">
-        <div className="search-container">
-          <FaSearch className="search-icon" />
-          <input
-            type="text"
-            placeholder="Search..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="navbarsearch"
-          />
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          {/* Hamburger toggle */}
+          <button
+            onClick={toggleSidebar}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1.3rem",
+              color: "#333",
+              padding: "4px",
+              display: "flex",
+              alignItems: "center",
+            }}
+            aria-label="Toggle Sidebar"
+          >
+            <FaBars />
+          </button>
+
+          <div className="search-container">
+            <FaSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="navbarsearch"
+            />
+          </div>
         </div>
       </div>
 

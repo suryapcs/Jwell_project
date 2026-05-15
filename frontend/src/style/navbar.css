@@ -6,7 +6,6 @@
   padding: 0.6rem 1.5rem;
   background-color: #ffffff; /* White background */
   color: #333;
-  /* border-bottom: 2px solid #e0e0e0; */
   position: fixed;
   top: 0;
   height: 60px;
@@ -14,7 +13,16 @@
   left: 250px;
   right: 0;
   transition: left 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
+@media (max-width: 768px) {
+  .navbar-head {
+    left: 0;
+    padding: 0.6rem 1rem;
+  }
+}
+
 
 /* New: Make navbar-left a flex container that grows to fill space */
 .navbar-left {

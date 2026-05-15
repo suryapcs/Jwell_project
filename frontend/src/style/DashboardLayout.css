@@ -13,10 +13,25 @@
   transition: margin-left 0.3s;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* prevent overflow */
 }
 
 .page-content {
-  /* padding: 1rem; */
   background-color: #f5f5f5;
   min-height: 100vh;
+  padding: 60px 0 0 0; /* offset for fixed navbar */
+  box-sizing: border-box;
 }
+
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+  .main-content.sidebar-open {
+    margin-left: 0; /* sidebar overlays, content fills full width */
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+}
+

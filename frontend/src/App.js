@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Loginpage from './componts/login/Loginpage';
+import RegisterPage from './componts/login/RegisterPage';
 import DashboardLayout from './DashboardLayout';
 import Addcustomer from './componts/dashboard/addcustomer';
 import AdminDashboard from './componts/dashboard/Admindashboard';
@@ -22,17 +23,51 @@ import ProtectedRoute from "./componts/ProtectedRoute";
 
 
 function App() {
- 
-   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const [isLoggedIn, setIsLoggedIn] = React.useState(
+    localStorage.getItem("isLoggedIn") === "true"
+  );
+
+  // Sync state with localStorage changes (e.g. from Loginpage or Sidebar)
+  React.useEffect(() => {
+    const handleStorageChange = () => {
+      setIsLoggedIn(localStorage.getItem("isLoggedIn") === "true");
+    };
+    window.addEventListener("storage", handleStorageChange);
+    
+    // Check periodically or on focus to keep it in sync
+    const interval = setInterval(handleStorageChange, 1000);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <Router>
       <Routes>
+        {/* Root path logic */}
         <Route
-        path="/"
-        element={
-          isLoggedIn ? <Navigate to="/AdminDashboard" replace /> : <Loginpage />
-        }
-      />
+          path="/"
+          element={
+            isLoggedIn ? (
+              <Navigate to="/AdminDashboard" replace />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+
+        {/* Dedicated Login Route */}
+        <Route 
+          path="/login" 
+          element={
+            isLoggedIn ? <Navigate to="/AdminDashboard" replace /> : <Loginpage />
+          } 
+        />
+
+        {/* Public register route */}
+        <Route path="/register" element={<RegisterPage />} />
 
         {/* Wrap all dashboard pages with DashboardLayout */}
         <Route path="/AdminDashboard" element={
@@ -143,5 +178,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

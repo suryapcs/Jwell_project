@@ -1,9 +1,9 @@
 // src/utils/api.js
 import axios from "axios";
 
-// ✅ PHP/MySQL backend – php -S localhost:8080 router.php
+// ✅ Live PHP/MySQL backend on pcstech.in
 const api = axios.create({
-  baseURL: "http://localhost:8080", // PHP backend base URL
+  baseURL: "https://pcstech.in/jewelry_api", // Live production API
   withCredentials: true, // ✅ send session cookies with every request
   headers: {
     "Content-Type": "application/json",

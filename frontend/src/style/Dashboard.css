@@ -109,9 +109,8 @@ body {
 
 /* Main Content */
 .main-content {
-  margin-left: 220px;
   padding: 20px;
-  width: calc(100% - 220px);
+  width: 100%;
   background-color: #fff;
   box-sizing: border-box;
   overflow-x: auto;
@@ -127,12 +126,13 @@ body {
 }
 
 .search-input {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
- 
 }
+
 
 .search-input:focus {
   outline: none;
@@ -141,8 +141,8 @@ body {
 
 /* Table wrapper */
 .table-wrapper {
-  overflow-x: auto; /* This will allow horizontal scrolling if the table overflows */
-  margin-left: 250px; /* This ensures the table is not hidden behind the sidebar (adjust the value to your sidebar width) */
+  overflow-x: auto; /* horizontal scroll if table overflows */
+  width: 100%;
 }
 
 /* Table styling */
